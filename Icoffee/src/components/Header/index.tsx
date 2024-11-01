@@ -1,7 +1,11 @@
 import { HeaderContainer,
     HeaderDiv,
     HeaderLogo,
-    HeaderMenu } from "./styles";
+    HeaderMenu,
+    MapPinContainer,
+    MapPinStyled, 
+    ShoppingCartContainer,
+    ShoppingCartStyled} from "./styles";
 import Logo from "../../assets/Logo.png"
 
 export function Header() {
@@ -10,7 +14,15 @@ export function Header() {
         <HeaderContainer>
             <HeaderLogo src={Logo}/>
             <HeaderMenu>
-                <a></a>
+              <MapPinContainer>
+                <MapPinStyled size={22} weight="fill"/>
+                <div>
+                  <p>Porto Alegre, RS</p>
+                </div>
+              </MapPinContainer>
+              <ShoppingCartContainer>
+                <ShoppingCartStyled size={22} weight="fill"/>
+              </ShoppingCartContainer>
             </HeaderMenu>
         </HeaderContainer>
       </HeaderDiv>
