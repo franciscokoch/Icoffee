@@ -1,65 +1,70 @@
-import styled from 'styled-components';
-import { MapPin, ShoppingCart } from "@phosphor-icons/react";
+import styled from 'styled-components'
 
-export const HeaderMenu = styled.div `
+export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 32px;
-  gap: 10px;
-`
+  width: 100%;
+  height: 6.5rem;
+  top: 0;
 
-export const MapPinContainer = styled.div `
-  width: 143px;
-  height: 38px;
-  background-color: ${(props => props.theme['purple-light'])};
-  border-radius: 5px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+  nav {
+    display: flex;
+    gap: 0.5rem;
+  }
 
-  & p {
-    color: ${(props => props.theme['purple-dark'])};
-    font-size: 15px;
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+
+    /* &:hover {
+      border-bottom: 3px solid ${(props) => props.theme['yellow-dark']};
+    } */
   }
 `
 
-export const MapPinStyled = styled(MapPin)`
+export const ButtonIconOnly = styled.button`
+  display: flex;
+  align-items: center;
+  background-color: ${(props) => props.theme['yellow-light']};
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+
+  cursor: pointer;
+`
+
+export const ButtonTextIcon = styled.button`
+  display: flex;
+  align-items: center;
+  background-color: ${(props) => props.theme['purple-light']};
+  border: 0;
+  padding: 0.5rem;
+  border-radius: 8px;
+  gap: 5px;
   color: ${(props) => props.theme['purple-dark']};
+  font-size: 0.875rem;
+  line-height: normal;
+
   cursor: pointer;
 `
 
-export const ShoppingCartContainer = styled.div `
-  width: 38px;
-  height: 38px;
-  border-radius: 5px;
+export const CartAmount = styled.span`
   display: flex;
   align-items: center;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
   justify-content: center;
-  background-color: ${(props => props.theme['yellow-light'])};
-  cursor: pointer;
-`
-
-export const ShoppingCartStyled = styled(ShoppingCart)`
-  color: ${(props) => props.theme['yellow-dark']};
-`
-
-export const HeaderDiv = styled.div `
-  width: 100%;
-  background-color: ${(props) => props.theme.background};
-`
-
-export const HeaderContainer = styled.div `
-  max-width: 74rem;
-  padding: 10px 20px;
-  display: flex;
-  margin: 0 auto;
-  justify-content: space-between;
-  align-items: center;
-`
-
-export const HeaderLogo = styled.img `
-  width: 85px;
-  height: auto;
+  background-color: ${(props) => props.theme['yellow-dark']};
+  color: white;
+  font-size: 0.75rem;
+  margin-top: -0.3rem;
+  margin-left: -1.3rem;
 `
