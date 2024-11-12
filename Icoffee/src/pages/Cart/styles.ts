@@ -155,7 +155,7 @@ export const ValueText = styled.span<{ $Total?: boolean }>`
   font-weight: ${(props) => (props.$Total ? '900' : 'normal')};
 `
 export const ButtonSend = styled.button`
-  background-color: ${(props) => props.theme['yellow-main']};
+  background-color: ${(props) => props.theme['yellow-main']}!important;
   color: white;
   display: flex;
   gap: 0.5rem;

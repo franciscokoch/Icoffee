@@ -227,9 +227,6 @@ export function Home() {
       </BannerContainer>
       <MenuContainer>
         <MenuTitle>Nossos Cafés</MenuTitle>
-        <Modal isOpen={open} setIsOpen={setOpen}>
-          <Cart />
-        </Modal>
         <Menu>
           {coffes.map((item) => (
             <CoffeeCard

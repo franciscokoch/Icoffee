@@ -1,5 +1,6 @@
 import React from "react"
 import { ModalContainer, ModalContent, XStyled } from "./styles"
+import { ShoppingCart } from 'phosphor-react'
 
 interface ModalProps {
   setIsOpen: (value: boolean) => void;
@@ -10,7 +11,7 @@ interface ModalProps {
 export function Modal({ setIsOpen, isOpen, children }: ModalProps) {
   return (
     <>
-      <button onClick={() => setIsOpen(!isOpen)}>Open Modal</button>
+      <ShoppingCart onClick={() => setIsOpen(!isOpen)} size={22} color="#c47f17" weight="fill" />
       {isOpen && (
         <ModalContainer>
           <ModalContent>

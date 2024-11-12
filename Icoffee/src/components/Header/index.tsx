@@ -5,13 +5,16 @@ import {
   HeaderContainer,
 } from './styles'
 import Logo from '../../assets/Logo.png'
-import { MapPin, ShoppingCart } from 'phosphor-react'
-import { NavLink } from 'react-router-dom'
+import { MapPin } from 'phosphor-react'
 import { useContext } from 'react'
 import { CartContext } from '../../contexts/CartContext'
+import { Modal } from '../Modal'
+import { Cart } from '../../pages/Cart'
+import { useState } from "react";
 
 export function Header() {
-  const { coffee } = useContext(CartContext)
+  const { coffee } = useContext(CartContext);
+  const [open, setOpen] = useState(false);
   return (
     <HeaderContainer>
       <img src={Logo} alt="" />
@@ -20,11 +23,11 @@ export function Header() {
           <MapPin size={22} color="#8047f8" weight="fill" />
           <span>Porto Alegre, RS</span>
         </ButtonTextIcon>
-        <NavLink to="cart" title="Menu">
-          <ButtonIconOnly>
-            <ShoppingCart size={22} color="#c47f17" weight="fill" />
-          </ButtonIconOnly>
-        </NavLink>
+        <ButtonIconOnly>
+            <Modal isOpen={open} setIsOpen={setOpen}>
+              <Cart />
+            </Modal>
+        </ButtonIconOnly>
         {coffee.length > 0 ? <CartAmount>{coffee.length}</CartAmount> : null}
       </nav>
     </HeaderContainer>
