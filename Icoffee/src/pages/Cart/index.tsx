@@ -99,6 +99,7 @@ export function Cart() {
       adress,
     }
     navigate('/checkout', { state })
+    toast.success('Pedido Confirmado')    
   }
 
   return (

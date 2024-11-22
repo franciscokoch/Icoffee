@@ -51,6 +51,7 @@ export function CartContextProvider({ children }: CartContextPrivderProps) {
     dispatch(removeAllAction())
   }
 
+
   return (
     <CartContext.Provider value={{ coffee : coffee.cartState.cart, removeCoffee, addCoffee, updateList, removeList, removeAll }}>
       {children}

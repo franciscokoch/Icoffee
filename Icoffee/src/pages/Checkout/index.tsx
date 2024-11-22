@@ -22,8 +22,8 @@ export function Checkout() {
   const { removeAll } = useContext(CartContext)
 
   useEffect(() => {
-    removeAll()
-  }, [removeAll])
+    removeAll();
+  }, []);
 
   return (
     <CheckoutCointainer>

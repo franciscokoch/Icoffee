@@ -154,7 +154,7 @@ export const ValueText = styled.span<{ $Total?: boolean }>`
   font-size: ${(props) => (props.$Total ? '1.3rem' : '1rem')};
   font-weight: ${(props) => (props.$Total ? '900' : 'normal')};
 `
-export const ButtonSend = styled.button`
+export const ButtonSend = styled.div`
   background-color: ${(props) => props.theme['yellow-main']}!important;
   color: white;
   display: flex;
